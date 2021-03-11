@@ -6,6 +6,8 @@
 * Ubuntu v20.10
 * Latex (full install)
 * GNU Make v4.3
+* Python v3.9.1
+* Go v1.16
 
 ### Fetch the latest version of the docker image source
 
@@ -14,6 +16,7 @@
 ```bash
 git clone https://github.com/elarivie/BuildServer.git
 cd BuildServer/
+wget -O docker_context/go1.16.2.linux-amd64.tar.gz https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
 ```
 
 ### Make sure docker deamon is running
@@ -53,12 +56,12 @@ sudo docker images
 
 ### Tag an image
 ```bash
-sudo docker tag a4c2e63a3777 elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex
+sudo docker tag a4c2e63a3777 elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex_go_1_16
 ```
 
 ### Push an image to [Docker.com](https://www.docker.com/)
 ```bash
-sudo docker push elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex
+sudo docker push elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex_go_1_16
 ```
 
 ### Remove an image

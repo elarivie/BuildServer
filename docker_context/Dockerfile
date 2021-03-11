@@ -1,3 +1,4 @@
+# https://hub.docker.com/_/ubuntu/
 FROM ubuntu:20.10
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -27,3 +28,16 @@ RUN ./configure --prefix=/usr && make -j && make -j install \
 ######RUN ./config --prefix=/usr && make -j && make -j install \
 ###### && rm -rf /openssl-1.1.1g
 ### STOP Install openssl 1.1.1g
+
+
+### START Install Go 1.16.1
+# https://golang.org/dl/go1.16.1.linux-amd64.tar.gz
+ADD go1.16.linux-amd64.tar.gz /
+WORKDIR /
+RUN tar -C /usr/local -xzf go1.16.1.linux-amd64.tar.gz
+ENV PATH=$PATH:/usr/local/go/bin
+### STOP Install go 1.16.1
+
+RUN go version
+RUN make --version
+RUN python3 --version
