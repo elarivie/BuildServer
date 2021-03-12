@@ -32,9 +32,7 @@ RUN ./configure --prefix=/usr && make -j && make -j install \
 
 ### START Install Go 1.16.2
 # https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
-ADD go1.16.2.linux-amd64.tar.gz /
-WORKDIR /
-RUN tar -C /usr/local -xzf go1.16.2.linux-amd64.tar.gz
+ADD go1.16.2.linux-amd64.tar.gz /usr/local/
 ENV PATH=$PATH:/usr/local/go/bin
 ### STOP Install go 1.16.2
 
