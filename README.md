@@ -56,12 +56,12 @@ sudo docker images
 
 ### Tag an image
 ```bash
-sudo docker tag a4c2e63a3777 elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex_go_1_16
+sudo docker tag a4c2e63a3777 elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex_go_1_16_2
 ```
 
 ### Push an image to [Docker.com](https://www.docker.com/)
 ```bash
-sudo docker push elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex_go_1_16
+sudo docker push elarivie/buildserver:ubuntu20_10_gnumake_4_3_latex_go_1_16_2
 ```
 
 ### Remove an image
