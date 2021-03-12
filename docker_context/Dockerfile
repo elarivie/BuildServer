@@ -36,6 +36,6 @@ ADD go1.16.2.linux-amd64.tar.gz /usr/local/
 ENV PATH=$PATH:/usr/local/go/bin
 ### STOP Install go 1.16.2
 
-RUN go version
 RUN make --version
 RUN python3 --version
+RUN go version
