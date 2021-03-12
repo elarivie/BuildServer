@@ -6,8 +6,8 @@
 * Ubuntu v20.10
 * Latex (full install)
 * GNU Make v4.3
-* Python v3.9.1
-* Go v1.16
+* Python v3.8.6
+* Go v1.16.2
 
 ### Fetch the latest version of the docker image source
 
