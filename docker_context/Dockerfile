@@ -30,13 +30,13 @@ RUN ./configure --prefix=/usr && make -j && make -j install \
 ### STOP Install openssl 1.1.1g
 
 
-### START Install Go 1.16.1
-# https://golang.org/dl/go1.16.1.linux-amd64.tar.gz
-ADD go1.16.linux-amd64.tar.gz /
+### START Install Go 1.16.2
+# https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
+ADD go1.16.2.linux-amd64.tar.gz /
 WORKDIR /
 RUN tar -C /usr/local -xzf go1.16.2.linux-amd64.tar.gz
 ENV PATH=$PATH:/usr/local/go/bin
-### STOP Install go 1.16.1
+### STOP Install go 1.16.2
 
 RUN go version
 RUN make --version
