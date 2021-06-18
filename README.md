@@ -3,11 +3,16 @@
 **Docker image used to build projects.**
 
 ## This docker image contains
-* Ubuntu v20.10
+* Ubuntu v21.04
 * Latex (full install)
 * GNU Make v4.3
-* Python v3.8.6
-* Go v1.16.2
+* Python v3.9.5
+* Go v1.16.5
+
+## Fresh install docker
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+	curl -fsSL https://get.docker.com -o get-docker.sh; sudo sh get-docker.sh;
 
 ### Fetch the latest version of the docker image source
 
@@ -16,7 +21,7 @@
 ```bash
 git clone https://github.com/elarivie/BuildServer.git
 cd BuildServer/
-wget -O docker_context/go1.16.2.linux-amd64.tar.gz https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
+wget -O docker_context/go1.16.5.linux-amd64.tar.gz https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
 ```
 
 ### Make sure docker deamon is running
@@ -29,6 +34,13 @@ sudo systemctl status docker
 ```bash
 sudo docker login
 ```
+
+**⚠**
+If you receive the following error when trying to login:
+
+	Error response from daemon: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+
+Then try again and again, try to provide user name and password quickly.
 
 ### Build an image
 
