@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/ubuntu/
-FROM ubuntu:22.04
+FROM ubuntu:22.10
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -17,11 +17,11 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 ### STOP Install Ubuntu packages
 
-### START Install Go 1.18.1
-# https://golang.org/dl/go1.18.1.linux-amd64.tar.gz
-ADD go1.18.1.linux-amd64.tar.gz /usr/local/
+### START Install Go 1.20.1
+# https://golang.org/dl/go1.20.1.linux-amd64.tar.gz
+ADD go1.20.1.linux-amd64.tar.gz /usr/local/
 ENV PATH=$PATH:/usr/local/go/bin
-### STOP Install go 1.18.1
+### STOP Install go 1.20.1
 
 RUN make --version
 RUN python3 --version

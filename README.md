@@ -3,11 +3,11 @@
 **Docker image used to build projects.**
 
 ## This docker image contains
-* Ubuntu v22.04
+* Ubuntu v22.10
 * Latex (full install)
 * GNU Make v4.3
-* Python v3.10.4
-* Go v1.18.1
+* Python v3.10.7
+* Go v1.20.1
 
 ## Fresh install docker
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
@@ -21,7 +21,7 @@ https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 ```bash
 git clone https://github.com/elarivie/BuildServer.git
 cd BuildServer/
-wget -O docker_context/go1.18.1.linux-amd64.tar.gz https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
+wget -O docker_context/go1.20.1.linux-amd64.tar.gz https://go.dev/dl/go1.20.1.linux-amd64.tar.gz
 ```
 
 ### Make sure docker deamon is running
@@ -68,12 +68,12 @@ sudo docker images
 
 ### Tag an image
 ```bash
-sudo docker tag ade8711949f5 elarivie/buildserver:ubuntu22_04_gnumake_4_3_latex_go_1_18_1
+sudo docker tag ed6b08d8497c elarivie/buildserver:ubuntu22_10_gnumake_4_3_latex_go_1_20_1
 ```
 
 ### Push an image to [Docker.com](https://www.docker.com/)
 ```bash
-sudo docker push elarivie/buildserver:ubuntu22_04_gnumake_4_3_latex_go_1_18_1
+sudo docker push elarivie/buildserver:ubuntu22_10_gnumake_4_3_latex_go_1_20_1
 ```
 
 ### Remove an image

@@ -1,2 +1,2 @@
-# Can't be commited since github as a 100mb limit per file ... wget -O docker_context/go1.16.2.linux-amd64.tar.gz https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
+# Can't be commited since github has a 100mb limit per file ... wget -O docker_context/go1.20.1.linux-amd64.tar.gz https://golang.org/dl/go1.20.1.linux-amd64.tar.gz
 docker_context/go*.linux-amd64.tar.gz
